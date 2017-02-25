@@ -1,3 +1,4 @@
+require "rubygems"
 require "artii"
 
 def start
@@ -48,7 +49,6 @@ end
 
 def run
 	puts "Bienvenido a Ruby-trivia, donde demuestras tus conocimientos en Ruby! por cada pregunta tienes 3 oportunidades para responder. No hay límite de tiempo. Cada respuesta correcta te da 1 punto ¿Cuántos puntos crees que puedes lograr?"
-	puts artii'Ruby-Rulez!'
 	questions,answers = start
 	index1 = 0
 	points = 0
@@ -59,6 +59,9 @@ def run
 		index1 +=1
 	end
 	puts "felicitaciones, has completado la prueba, tu resultado es #{points}"
+	puts a.asciify('keep rockin!')
 end
 
+a = Artii::Base.new :font => 'slant'
+puts a.asciify('ruby-rulez!')
 run
